@@ -1,0 +1,40 @@
+brdfMean 64spp:
+
+3x3: 43.69s
+
+5x5: 42.70s
+
+7x7: 42.64s
+
+brdfGaussian 64spp:
+
+3x3: 44.17s
+
+5x5: 43.25s
+
+7x7: 45.04s
+
+normalMean 64spp:
+
+3x3: 43.69s
+
+5x5: 44.04s
+
+7x7: 46.13s
+
+normalGaussian 64spp:
+
+3x3: 44.84s
+
+5x5: 43.94s
+
+7x7: 44.41s
+
+dofMean 64spp:
+
+10/0: 43.61s
+
+10/4: 44.01s
+
+10/9: 44.21s
+

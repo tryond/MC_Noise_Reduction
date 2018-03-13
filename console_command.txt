@@ -1,0 +1,3 @@
+g++ -std=c++11 -O3 -fopenmp -o simplept RNG.cpp Vec.cpp SimpleFilter.cpp ObjectFilter.cpp BrdfFilter.cpp NormalFilter.cpp DofFilter.cpp simplept.cpp
+
+simplept 256
