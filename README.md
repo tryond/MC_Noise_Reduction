@@ -45,8 +45,6 @@ mc-noise-reduce <username>$ simplept X a b c d e f g h i j k l m n
 
 **The following lower-case letters refer to filter types. The number designated refers to the size of the filter. Setting a filter to zero will turn the filter off entirely.**
 
-A full write-up describing each filter can be found [here](https://tryond.github.io/noise_red.html).
-
 * **a**: simple mean parameter
 
 * **b**: simple median parameter
@@ -75,6 +73,8 @@ A full write-up describing each filter can be found [here](https://tryond.github
 
 * **n**: dof gray focus level parameter
 
+**A full write-up describing each filter can be found [here](https://tryond.github.io/noise_red.html).**
+
 ### Example
 
 The following command will generate a 64 sample-per-pixel rendering which applies both a 7 pixel wide simple median filter and a 3 pixel wide simple gaussian filter. 
@@ -89,7 +89,19 @@ mc-noise-reduce <username>$ simplept 64 0 7 3 0 0 0 0 0 0 0 0 0 0 0
 
 ![Combo Filter gif](res/combo_16_anim.gif?raw=true "Animation that shows a scene rendered with a combo filter at 16spp")
 
+* 16 samples-per-pixel
+* 7 pixel wide simple median filter and a 3 pixel wide simple gaussian filter
+* Render Time: 412.1 seconds
+
 ![No Filter gif](res/none_32_anim.gif?raw=true "Animation that shows a scene rendered with no filter at 32spp")
+
+* 32 samples-per-pixel
+* No filter
+* Render Time: 815.7 seconds
+
+After experimenting with the different types of filters and fine tuning their parameters, I found that the combination of the simple median and the simple gaussian worked very well. I was able to maintain the visual quality of the rendering with the higher sampling rate while cutting the time taken in half.
+
+Please feel free to experiment and find out what combinations work well for you!
 
 ## Author
 
