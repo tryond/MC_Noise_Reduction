@@ -7,11 +7,11 @@ MC Rendering Noise Reduction is a program which implements several different fil
 
 ## Description
 
-Monte Carlo Path Tracing casts a ray from the viewer perspective out through each pixel in the frame. Each ray reflects off the objects in the scene a specified amount of times and returns a value for its respective pixel. As one can imagine, this operation can take a very long time to complete. This is compounded by the fact that Monte Carlo Renderings generally require many samples-per-pixels to produce clean results. 
+Monte Carlo Path Tracing casts a ray from the viewer perspective out through each pixel in the frame. Each ray reflects off the objects in the scene a specified amount of times and returns a value for its respective pixel. As one can imagine, this operation can take a very long time to complete. This is compounded by the fact that Monte Carlo Renderings generally require many samples-per-pixel to produce clean results. 
 
 The purpose of this project is to attain the results of a scene generated using high samples-per-pixel by applying post-processing filters to their low sample counterparts. 
 
-Goals:
+### Goals:
 1. Reduce overall noise
 2. Maintain or improve upon time complexity
 3. Maintain or improve upon visual results
@@ -19,7 +19,7 @@ Goals:
 
 ## Motivation
 
-MC Rendering Noise Reduction was created as my senior project in **CS114: Projects in Advanced 3D Computer Graphics** at University of California, Irvine.
+MC Rendering Noise Reduction was created as my senior project in **CS114: Projects in Advanced 3D Computer Graphics** at the University of California, Irvine.
 
 ## Instructions
 
@@ -41,43 +41,43 @@ mc-noise-reduce <username>$ simplept X a b c d e f g h i j k l m n
 
 **Replace each letter in the run command with an intenger >= 0**
 
-* **X**: samples-per-pixel
+* **X**: Samples-per-pixel
 
 **The following lower-case letters refer to filter types. The number designated refers to the size of the filter. Setting a filter to zero will turn the filter off entirely.**
 
-* **a**: simple mean parameter
+* **a**) Simple mean parameter
 
-* **b**: simple median parameter
+* **b**) Simple median parameter
 
-* **c**: simple gaussian parameter
+* **c**) Simple gaussian parameter
 
-* **d**: object mean parameter
+* **d**) Object mean parameter
 
-* **e**: object median parameter
+* **e**) Object median parameter
 
-* **f**: object gaussian parameter
+* **f**) Object gaussian parameter
 
-* **g**: brdf mean parameter
+* **g**) Brdf mean parameter
 
-* **h**: brdf gaussian parameter
+* **h**) Brdf gaussian parameter
 
-* **i**: normal mean parameter
+* **i**) Normal mean parameter
 
-* **j**: normal gaussian parameter
+* **j**) Normal gaussian parameter
 
-* **k**: dof mean level parameter
+* **k**) Dof mean level parameter
 
-* **l**: dof mean focus level parameter
+* **l**) Dof mean focus level parameter
 
-* **m**: dof gray level parameter
+* **m**) Dof gray level parameter
 
-* **n**: dof gray focus level parameter
+* **n**) Dof gray focus level parameter
 
 **A full write-up describing each filter can be found [here](https://tryond.github.io/noise_red.html).**
 
 ### Example
 
-The following command will generate a 64 sample-per-pixel rendering which applies both a 7 pixel wide simple median filter and a 3 pixel wide simple gaussian filter. 
+The following command will generate a **64** sample-per-pixel (**X**) rendering which applies both a **7** pixel wide simple median filter (**b**) and a **3** pixel wide simple gaussian filter (**c**). 
 
 ```console
 mc-noise-reduce <username>$ simplept 64 0 7 3 0 0 0 0 0 0 0 0 0 0 0
