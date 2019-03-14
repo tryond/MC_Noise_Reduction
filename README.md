@@ -71,7 +71,7 @@ MC Rendering Noise Reduction was created as my senior project in **CS114: Projec
 
 Console compile command:
 
-'''console
+'''shell
 g++ -std=c++11 -O3 -fopenmp -o simplept RNG.cpp Vec.cpp SimpleFilter.cpp ObjectFilter.cpp BrdfFilter.cpp NormalFilter.cpp DofFilter.cpp simplept.cpp
 '''
 
@@ -79,7 +79,7 @@ g++ -std=c++11 -O3 -fopenmp -o simplept RNG.cpp Vec.cpp SimpleFilter.cpp ObjectF
 
 Sample console run command:
 
-'''console
+'''shell
 simplept 256 1 2 3 4 5 6 7 8 9 10 11 12 13 14 
 '''
 
